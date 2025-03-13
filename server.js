@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: '*',
+    origin: "http://localhost:3000",
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    credentials: true,
     optionsSuccessStatus: 204
   };
 app.use(cors(corsOptions));
