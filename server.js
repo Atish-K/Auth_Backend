@@ -38,6 +38,9 @@ function checkFileType(file, cb) {
     cb('Error: Images Only!');
   }
 }
+app.get('/', (req, res) => {
+  res.send({message:"Running"});
+});
 
 // Define routes
 app.use('/api/admin', require('./routes/admin'));
