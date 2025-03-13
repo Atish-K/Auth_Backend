@@ -44,7 +44,6 @@ function checkFileType(file, cb) {
   }
 }
 app.get('/', (req, res) => {
-    connectDB();
   res.send({message:"Running Backend"});
 });
 
