@@ -47,7 +47,7 @@ function checkFileType(file, cb) {
   }
 }
 app.get('/', (req, res) => {
-  res.send({message:"Running"});
+  res.send({message:"Running Backend"});
 });
 
 // Define routes
