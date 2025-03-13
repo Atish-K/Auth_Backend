@@ -8,14 +8,11 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 
-const corsOptions = {
-    origin: 'https://auth-backend-delta.vercel.app/',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-    optionsSuccessStatus: 204
-  };
-  
-  app.use(cors(corsOptions));
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
 
 // Set up storage engine for multer
 const storage = multer.diskStorage({
